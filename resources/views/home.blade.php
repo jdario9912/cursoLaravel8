@@ -5,6 +5,5 @@
 @section('content')
     
     <h1>pagina de Home</h1>
-    <p>Este es el parrafo del home</p>
-
+    <a href="{{route('cursos.index')}}">Cursos</a>
 @endsection
