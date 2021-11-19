@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Curso;
+use App\Http\Requests\StoreCurso;
 
 class CursoController extends Controller
 {
@@ -20,13 +21,8 @@ class CursoController extends Controller
         return view('cursos.create');
     }
 
-    public function store(Request $request)
+    public function store(StoreCurso $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'description' => 'required',
-            'categoria' => 'required'
-        ]);
 
         $curso = new Curso();
 
